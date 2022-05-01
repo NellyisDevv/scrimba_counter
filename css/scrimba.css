@@ -34,6 +34,13 @@ body {
     transform: translateY(0);
   }
 }
+.welcome-container {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1em;
+  font-weight: 700;
+  transition: 1s;
+}
 .counter-container {
   background-image: url('https://images.pexels.com/photos/421129/pexels-photo-421129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
@@ -60,18 +67,27 @@ body {
 }
 button {
   border: none;
-  padding-top: 10px;
+  padding: 1em;
   background-color: white;
   font-weight: 700;
-  width: 100px;
+  width: 50%;
   margin-bottom: 5px;
-  border-radius: 5px;
+  border-radius: 4em;
+  font-size: 0.7em;
 }
 #increment-btn {
-  background: darkred;
+  background: rgb(255, 0, 255);
+  cursor: pointer;
+}
+#decrement-btn {
+  background: rgb(136, 0, 255);
+  cursor: pointer;
+  margin-top: 1em;
 }
 #save-btn {
-  background: darkgreen;
+  background: rgb(255, 0, 255);
+  margin-top: 1em;
+  cursor: pointer;
 }
 .info {
   text-align: center;
@@ -217,8 +233,8 @@ button {
 */
 @media (min-width: 1280px) and (max-width: 1728px) {
   .counter-container {
-    max-width: 350px;
-    height: 70vh;
+    max-width: 32%;
+    height: 75vh;
     font-size: 1.5em;
   }
   .people-counted h2 {

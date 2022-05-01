@@ -9,19 +9,31 @@
     <title>People Counter</title>
   </head>
   <body>
+    <div class="welcome-container">
+      <p id="welcome-el"></p>
+    </div>
     <div class="counter-container">
       <div class="people-entered">
-        <h1>People Entered:</h1>
+        <h1>People entered:</h1>
       </div>
       <div class="people-counted">
         <h2 id="count-el">0</h2>
       </div>
+      <div class="button">
+        <button id="increment-btn" onclick="increment(), audio.play()">
+          INCREMENT
+        </button>
+        <button id="decrement-btn" onclick="decrement(), bleep.play()">
+          DECREMENT
+        </button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+      </div>
     </div>
-    <script src="scrimba.js"></script>
     <footer>
       <div class="info">
         <h5>Made by <a href="https://nellyisdev.com">NellyisDev</a></h5>
       </div>
     </footer>
+    <script src="scrimba.js"></script>
   </body>
 </html>

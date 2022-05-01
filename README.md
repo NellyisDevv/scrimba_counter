@@ -19,3 +19,12 @@ And after I want to go back to Odin and make the Rock, Paper, Scissor game on my
 
 [https://css-tricks.com/css-link-hover-effects/]
 [https://uigradients.com/#Radar]
+[https://www.youtube.com/watch?v=VlwSz2dXK_8]
+[https://www.youtube.com/watch?v=0R6rZngcHGg]
+
+# Added Features
+
+One feature I added that is not part of the scrimba
+counter is the ability to decrement the count. Also, I've
+added the ability to hear sound when you click one of the
+buttons!
