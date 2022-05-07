@@ -136,3 +136,18 @@ called a model of the "real" thing.
 // In your head you can think of it as,
 // "how to use javascript to manipulate websites"
 // update
+let saveEl = document.getElementById('save-el');
+function save() {
+  let countStr = count + ' - ';
+  saveEl.textContent += countStr; // saveEl.textContent = saveEl.textContent + countStr
+  // textContent and innerText is different but do similar things
+  countEl.innerText = 0;
+  count = 0;
+}
+// Making my own reset button
+let resetEl = document.getElementById('reset-el');
+function reset() {
+  countEl.innerText = 0;
+  count = 0;
+  // countEl.innerText *= resetCount;
+}

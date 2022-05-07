@@ -144,6 +144,7 @@ button {
 @media (min-width: 320px) and (max-width: 926px) {
   .welcome-container p {
     font-size: 0.9em;
+    padding: 1em;
   }
   .counter-container {
     max-width: 90%;
