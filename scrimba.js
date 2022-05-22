@@ -1,15 +1,18 @@
+// CHAINGING INNERTEXT TO REFLECT COUNT
 let countEl = document.getElementById('count-el');
 let count = 0;
+// INCREMENT TO MAKE 0 GO UP
 function increment() {
   count += 1; // This means count = count + 1
   // document.getElementById('count-el').innerText = count;
   countEl.innerText = count;
 }
+// DECREMENT TO MAKE 0 GO DOWN
 function decrement() {
   count -= 1; // This means count = count - 1
   countEl.innerText = count;
 }
-// Adding button click sound
+// ADDING SOUNDS TO BUTTONS ONCLICK
 const audio = new Audio();
 audio.src = 'decrement.wav';
 // Decrement click sound
@@ -47,7 +50,7 @@ welcomeEl.innerText += ' 👋';
 // NB: Make sure to not delete the existing content of the paragraph
 let saveEl = document.getElementById('save-el');
 function save() {
-  let countStr = count + ' - ';
+  let countStr = count + ' _ ';
   saveEl.textContent += countStr; // saveEl.textContent = saveEl.textContent + countStr
   // textContent and innerText is different but do similar things
   countEl.innerText = 0;
@@ -57,6 +60,6 @@ function save() {
 let resetEl = document.getElementById('reset-el');
 function reset() {
   countEl.innerText = 0;
-  count = 0;
+  saveEl.textContent = 'Previous entires: ' + '';
   // countEl.innerText *= resetCount;
 }

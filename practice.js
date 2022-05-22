@@ -1,153 +1,118 @@
-// document.getElementById('count-el').innerText = 10000;
+// 1
 
-// let firstBatch = 5;
-// let secondBatch = 7;
-// let count = firstBatch + secondBatch;
-// console.log(count);
-// cmd + k + c comments out all code selected
+// Create two variables, firstName and lastName
 
-// 1. Create two variables, myAge and humanDogRatio
-// 2. Multiply the two together and store the result in myDogAge
-// 3. Log myDogAge to the console
+// Concatenate the two varaibles into a third variable called
+// fullName
 
-// let myAge = 20; // Since I am 20 my dog is 140 years old!
-// const humanDogRatio = 7;
-// myDogAge = myAge * humanDogRatio;
-// console.log(myDogAge);
+// Log fullName to the console
 
-// Create a variable, bonusPoints. Initialize it as 50. Increase it
-// to 100.
-// Decrease it down to 25, and then finally increase it to 70
+let firstName = 'Nelson ';
+let lastName = 'Rosario';
 
-// let bonusPoints = 50;
-// bonusPoints = bonusPoints + 50;
-// bonusPoints = bonusPoints - 75;
-// bonusPoints = bonusPoints + 45;
-// console.log(bonusPoints);
+fullName = firstName + lastName;
+console.log(fullName);
 
-// let count = 5;
-// count = count + 1;
-// console.log(count);
+// 2
 
-function increment() {}
+let name = 'Korah';
+let greeting = 'Hi there';
 
-function countDown() {
-  console.log(5);
-  console.log(4);
-  console.log(3);
-  console.log(2);
-  console.log(1);
+// Create a function that logs out "Hi there, Linda!" when called
+
+function greetKorah() {
+  console.log(`${greeting}, ${name}!`);
 }
 
-// Setting up the race 🏎 🏎 🏎
-
-countDown();
-
-// GO! 🏁
-// Players are running the race 🏎 💨
-// Race is finished!
-
-// Get ready for a new race 🏎 🏎 🏎
-
-countDown();
-
-// console.log(5);
-// console.log(4);
-// console.log(3);
-// console.log(2);
-// console.log(1);
-
-// Create a function (you decide the name) that logs out the number 42
-// to the console
-// Call/invoke the function
-
-function fortyTwo() {
-  console.log(42);
+function greetingKorah() {
+  console.log(greeting + ', ' + name + '!');
 }
 
-// Invoking the function
+greetKorah();
+greetingKorah();
 
-fortyTwo();
+// 3
+let myPoints = 3;
 
-let lap1 = 34;
-let lap2 = 33;
-let lap3 = 36;
+/* Create two functions, add3Points() and remove1Point(), and
+have them add/remove points to/from the myPoints variable */
 
-// Create a function that logs out the sum of all the lap times
-
-function lapSum() {
-  let totalTime = lap3 + lap2 + lap1;
-  console.log(totalTime);
-  // console.log(lap1 + lap2 + lap3);
+function add3Points() {
+  myPoints += 3; // myPoints = myPoints + 3
 }
 
-lapSum();
-
-let lapsCompleted = 0;
-
-// Create a function that increments the lapsCompleted
-// variable with one
-// Run it three times
-
-function incrementLap() {
-  lapsCompleted = lapsCompleted + 1;
+function remove1Point() {
+  myPoints -= 1; // myPoints = myPoints - 1
 }
 
-incrementLap();
-incrementLap();
-incrementLap();
+add3Points();
+add3Points();
+add3Points();
+remove1Point();
+remove1Point();
 
-// initialize the count as 0
-// listen for clicks on the increment button
-// increment the count variable when the button is clicked
-// change the count-el in the HTML to reflect the new count
+// Call the functions to that the line below logs out 10
+console.log(myPoints);
 
-let counted = 0;
+// 4
 
-document.getElementById('increment-btn').onclick = buttonClicked();
+// Try to predict what each of the lines will log out
+console.log('2' + 2); // "22"
+console.log(11 + 7); // 18
+console.log(6 + '5'); // "65"
+console.log('My points: ' + 5 + 9); // "My points: 59"
+console.log(2 + 2); // 4
+console.log('11' + '14'); // "1114"
 
-function buttonClicked() {
-  count = count + 1;
-  console.log(counted);
+// 5
+
+// When the user clicks purchase button, render out
+// "Something went wrong, please try again" in the paragraph
+// that has the id = "error"
+
+let errorMessage = document.getElementById('error');
+
+function error() {
+  errorMessage.textContent = 'Something went wrong, please try again';
 }
 
-// camelCase
+// 6
 
-let countEl = document.getElementById('count-el');
+let num1 = 8;
+let num2 = 2;
+document.getElementById('num1-el').textContent = num1;
+document.getElementById('num2-el').textContent = num2;
 
-console.log(countEl);
+// Create four functions: add(), subtract(), divide(), multiply()
 
-let count = 0;
+let overallSum = document.getElementById('sum-el');
 
-function increment() {
-  count = count + 1;
-  document.getElementById('count-el').innerText = count;
+/* function add() {
+  overallSum.textContent = num1 + num2;
 }
-
-// What does DOM stand for?
-/*
-D --> the D in DOM stands for document, or the actual
-html file you are working with!
-O --> the O stands for Object 
-M --> M stands for model there is the real representation
-inside of the html code, and the javascript version is
-called a model of the "real" thing.
 */
-// In your head you can think of it as,
-// "how to use javascript to manipulate websites"
-// update
-let saveEl = document.getElementById('save-el');
-function save() {
-  let countStr = count + ' - ';
-  saveEl.textContent += countStr; // saveEl.textContent = saveEl.textContent + countStr
-  // textContent and innerText is different but do similar things
-  countEl.innerText = 0;
-  count = 0;
+// SOLUTION TO MAKE "SUM" APPEAR WITHOUT ADDING STRINGS
+function add() {
+  let result = num1 + num2;
+  overallSum.textContent = 'Sum: ' + result;
 }
-// Making my own reset button
-let resetEl = document.getElementById('reset-el');
-function reset() {
-  countEl.innerText = 0;
-  count = 0;
-  // countEl.innerText *= resetCount;
+function subtract() {
+  overallSum.textContent = num1 - num2;
 }
+
+function divide() {
+  overallSum.textContent = num1 / num2;
+}
+
+function multiply() {
+  overallSum.textContent = num1 * num2;
+}
+
+/* Call the correct function when the user clicks on one of the
+buttons */
+// Perform the given calculation using num1 and num2
+/* Render the result of the calculation in the paragraph with
+id="sum-el" */
+
+// E.g. if the user clicks on the "Plus" button, you should render
+/* "Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el" */
